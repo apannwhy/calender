@@ -1,23 +1,20 @@
-#program untuk melihat kalender
-#import packages calendar
+# program untuk melihat kalender
+# import packages
 import calendar
-import os
+import sys
 import time
 
+# perulangan pilihan
+x = "curut"
 
-year = int(input("Masukkan tahun : "))
-month = int(input("Masukkan bulan (dalam angka) : "))
-# print kalender
-print(calendar.month(year, month))
+while x == "curut":
+    year = int(input("Masukkan tahun : "))
+    month = int(input("Masukkan bulan (dalam angka) : "))
+    # print kalender
+    print(calendar.month(year, month))
 
-
-keluar = input("Ingin keluar (y/n) : ")
-
-	
-# pilihan
-while(keluar == "y"):
-	time.sleep(1)
-	os.system("exit")
-else:
-	print("system out")
-	time.sleep(3)
+    # input untuk pilihan
+    keluar = input("apakah anda ingin keluar (y/n) => ")
+    if keluar == "y":
+        time.sleep(2)
+        sys.exit()
